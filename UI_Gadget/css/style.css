@@ -1,0 +1,300 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin:0;
+	padding:0;
+	border:0;
+	width:100%;
+	background:#fff;
+	min-width:600px;
+	font-size:12px;
+}
+.tab-container {
+	width:100px;
+}
+.gadget-title {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#ef433d;
+	font-size:18px;
+}
+.gadget-content {
+	margin-left:53px;
+	width:194px;
+	height:300px;
+	margin-top:13px;
+}
+.gadget-sub-title {
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#616161;
+}
+.gadget-content .textInput {
+	background: url("../images/gadget-searchbox.png") no-repeat scroll 0 0 transparent;
+	color: #b0b0b0;
+	height: 22px;
+	width: 210px;
+	border: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding-left: 14px;
+	border: none;
+	float: left;
+	vertical-align: middle;
+	line-height: 24px;
+	margin-top:7px;
+}
+.textInput:focus, input:focus {
+	outline:none
+}
+.gadget-search-btn {
+	background: url("../images/gadget-search-btn.png") no-repeat scroll 0 0 transparent;
+	border: none;
+	cursor:pointer;
+	display: inline;
+	height: 22px;
+	text-indent: -999px;
+	width: 21px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align:top;
+	float: left;
+	font-size: 0;
+	display:block;
+	line-height: 0;
+	position:absolute;
+	z-index:1002;
+	margin-left:199px;
+	margin-top:7px;
+}
+.gadget-search {
+	height:21px;
+}
+.results-number {
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#616161;
+	margin-top:45px;
+}
+.results-bold {
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333333;
+	font-weight:bold;
+}
+.gadget-content table {
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333333;
+	font-weight:bold;
+	border:none;
+	margin-top:6px;
+}
+.gadget-table-col {
+	height:21px;
+	width:192px;
+}
+.gadget-table-col-1 {
+	padding-left: 7px;
+	padding-top: 3px;
+	padding-bottom:8px;
+	width: 100px;
+	font-weight:700;
+	background: url("../images/gadget-table-col.png") no-repeat 0 0;
+}
+.gadget-table-col-2 {
+	background: url("../images/gadget-table-col.png") no-repeat scroll -100px 0 transparent;
+	font-weight: 700;
+	padding-left: 22px;
+	padding-top: 3px;
+	padding-bottom:8px;
+	width: 112px;
+}
+td.objectname a {
+	color: #2E4C60;
+	font-size: 11px;
+	font-weight:normal;
+	line-height: 17px;
+	text-decoration:none;
+}
+td.objectname a:hover {
+	text-decoration:underline;
+}
+td.namefield a {
+	color: #2E4C60;
+	font-size: 11px;
+	font-weight:normal;
+	line-height: 17px;
+	text-decoration:none;
+}
+td.namefield a:hover {
+	text-decoration:underline;
+}
+.mt-10 {
+	margin-top:10px;
+}
+.gadget-poweredby {
+	background: url("../images/gadget-poweredby.png") no-repeat 0 0 transparent;
+	width:92px;
+	height:31px;
+	margin-top:16px;
+}
+.hideextra {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	width:100px;
+	text-indent:7px;
+}
+.hideextra-obj {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	width:70px;
+	text-indent:7px;
+}
+.gadget-contract-btn {
+	background: url("../images/gadget-contract-btn.png") no-repeat scroll 0 0 transparent;
+	height: 23px;
+	position: absolute;
+	top:10px;
+	right:55px;
+	width: 22px;
+	cursor:pointer;
+}
+/* Sliding Tab Structure */
+
+#examples {
+	float: left;
+	width: 375px;
+}
+#code {
+	float: left;
+	width: 560px;
+}
+#code pre {
+	width: 560px;
+	overflow: auto;
+}
+.slide {
+	float: right;
+	height: 390px;
+	margin-top: 139px;
+	position: fixed;
+	right: -100px;
+	width: 355px;
+	z-index: 1000;
+}
+.slide #inner {
+	background:url("../images/BG-Gadget.png") no-repeat scroll 0 0 transparent;
+	bottom: 0;
+	color: #333333;
+	height: 387px;
+	left: 0;
+	position: absolute;
+	width: 330px;
+}
+.slide button {
+	background: none;
+	border: none;
+	height: 179px;
+	margin-left: 2px;
+	margin-top: 30px;
+	position: absolute;
+	width: 31px;
+	z-index: 1001;
+	cursor:pointer;
+	outline:none;
+}
+.js #slidebottom .inner {
+	display: none;
+}
+
+div.filter-container {
+	position: relative;
+	top:5px;
+}
+
+/* applied to original <select> to hide */
+.has_sb{position:absolute;left:-999999em;text-indent:-999999em;}
+
+/* always visible styles */
+.selectbox {display:inline-block;*display:inline;font-family:arial;font-size:1em;margin:1px;position:relative;vertical-align:middle;zoom:1;}
+.selectbox .display{
+  background:#82afc6;
+  border:1px solid #c2d6e0;
+  color:#fff;
+  cursor:default;
+  display:block;
+  font-weight:normal;
+  height:1.46em;
+  line-height:1.46em;
+  overflow:hidden;
+  outline:none;
+  padding:2px 24px 2px 12px;
+  position:relative;
+  text-decoration:none;
+  overflow:hidden;
+  width:180px;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  cursor: pointer;
+}
+.selectbox.disabled .display{color:#666;}
+.selectbox.focused .display .text{background-color:#82afc6; color:#fff;display:inline-block;*display:inline;zoom:1;}
+.selectbox .display.active{border-color:#7b7d83;}
+.selectbox .display .arrow_btn{
+    background: url(../images/select-button.png) no-repeat 0 0;
+	display: block;
+	height: 20px;
+	line-height: .92em;
+	padding: 4px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 1.08em;
+	right: 0;
+}
+
+.selectbox .display .arrow_btn .arrow{
+    
+}
+.selectbox .display.active .arrow_btn{
+    
+}
+.selectbox .display.hover .arrow_btn{background: url(../images/select-button.png) no-repeat 0 -20px;}
+.selectbox .value{display:none;}
+
+/* dropdown styles */
+.selectbox.items{
+  background:#fff;
+  border:1px solid #828790;
+  display:block;
+  font-family:arial;
+  font-size:1em;
+  list-style-type:none;
+  margin:0;
+  overflow-x:hidden;
+  overflow-y:auto;
+  padding:0 0 1px 0;
+  z-index:99999;
+  -moz-box-shadow:0 3px 5px rgba(0,0,0,.5);
+  -webkit-box-shadow:0 3px 5px rgba(0,0,0,.5);
+}
+.selectbox.items.above{}
+.selectbox.items li{display:block;margin:0;padding:0;/*white-space:nowrap; maybe necessary if using fixedWidth: false */}
+.selectbox.items li.first{margin-top:0;}
+.selectbox.items li>.item{color:#000;cursor:default;display:block;padding:4px 6px;text-decoration:none;}
+.selectbox.items li>.item>.text{display:inline-block;*display:inline;zoom:1;}
+.selectbox.items li.selected>.item{border-bottom:1px dotted #999;border-top:1px dotted #999;}
+.selectbox.items li.disabled>.item{color:#999;}
+.selectbox.items li.hover>.item{background-color:#3399ff;color:#fcfcfc;}
+.selectbox.items .value{display:none;}
+
+.filter-select {
+	position:relative;
+	top:3px;
+}

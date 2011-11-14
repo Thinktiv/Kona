@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+    <title>Kona DataSearch</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      document.documentElement.className = 'js';
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/JavaScript">
+    $(document).ready(function (){
+    	$('#button a').click(function(){
+    		var integer = $(this).attr('rel');
+    		$('#myslide .cover').animate({left:-281*(parseInt(integer)-1)})  /*----- Width of div image-holder (here 160) ------ */
+    		$('#button a').each(function(){
+    		$(this).removeClass('active');
+    			if($(this).hasClass('button'+integer)){
+    				$(this).addClass('active')}
+    		});
+    	});	
+    });
+    </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/JavaScript">
+    $(document).ready(function (){
+    	$('#button4 a').click(function(){
+    		var integer = $(this).attr('rel');
+    		$('#myslide2 .cover2').animate({left:-281*(parseInt(integer)-1)})  /*----- Width of div image-holder (here 160) ------ */
+    		$('#button4 a').each(function(){
+    		$(this).removeClass('active');
+    			if($(this).hasClass('button4'+integer)){
+    				$(this).addClass('active')}
+    		});
+    	});	
+    });
+    </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/JavaScript">
+    $(document).ready(function (){
+    	$('#button5 a').click(function(){
+    		var integer = $(this).attr('rel');
+    		$('#myslide3 .cover3').animate({left:-281*(parseInt(integer)-1)})  /*----- Width of div image-holder (here 160) ------ */
+    		$('#button5 a').each(function(){
+    		$(this).removeClass('active');
+    			if($(this).hasClass('button5'+integer)){
+    				$(this).addClass('active')}
+    		});
+    	});	
+    });
+    </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/JavaScript">
+    $(document).ready(function (){
+    	$('#button6 a').click(function(){
+    		var integer = $(this).attr('rel');
+    		$('#myslide4 .cover4').animate({left:-281*(parseInt(integer)-1)})  /*----- Width of div image-holder (here 160) ------ */
+    		$('#button6 a').each(function(){
+    		$(this).removeClass('active');
+    			if($(this).hasClass('button6'+integer)){
+    				$(this).addClass('active')}
+    		});
+    	});	
+    });
+    </script>
+    </head>
+    <body>
+<div class="top-container">
+<div class="page-titles">
+<h1>Welcome to KonaSearch</h1>
+<p class="kona-intro mt-5">KonaSearch brings the world of information from sources like Outlook&reg; and SharePoint&reg; to your<br />
+      Salesforce&reg; experience and puts it into context to help you find deals and close them faster.</p>
+<p class="kona-intro mt-10">Kona DataSearch&trade; helps you sell better:</p>
+<ul class="points">
+      <li>Find more opportunities like the one you just closed</li>
+      <li>Find all email between your company and an account</li>
+      <li>Learn from your big deals how to close a difficult opportunity</li>
+    </ul>
+<h1 class="mt-16">Ready to Get Started?</h1>
+<p class="kona-intro mt-5">Follow the steps below to get KonaSearch installed correctly.<br />
+      Click on a <span class="rlinks">link</span> to see the corresponding screenshot reference.</p>
+      
+<div class="col-1">
+  <div id="myslide">
+    <div class="cover">
+      <div class="image-holder"> <img src="images/box-1.jpg" width="281" height="174" /></div>
+      <div class="image-holder"> <img src="images/step-1/1.jpg" width="281" height="174" /></div>
+      <div class="image-holder"> <img src="images/step-1/2.jpg" width="281" height="174" /></div>
+      <div class="image-holder"> <img src="images/step-1/3.jpg" width="281" height="174" /></div>
+      <div class="image-holder"> <img src="images/step-1/4.jpg" width="281" height="174" /></div>
+      <div class="image-holder"> <img src="images/step-1/5.jpg" width="281" height="174" /></div>
+    </div>
+  </div>
+  <div id="button">
+  <h1><span class="fw-t">Step 1:</span> <a class="button1 active" rel="1" href="#">Install KonaSearch</a></h1>
+    <ul class="step-lists">
+      <li>Go to the <a class="button2" rel="2" href="#">KonaSearch Operations</a> Tab</li>
+      <li>Click the <a class="button3" rel="3" href="#">Configure</a> Button</li>
+      <li>Click the <a class="button4" rel="4" href="#">Create</a> Button</li>
+      <li>Click the <a class="button5" rel="5" href="#">Test</a> Button</li>
+      <li>Click the <a class="button6" rel="6" href="#">Complete</a> Button</li>
+    </ul>
+  </div>
+</div>
+    
+<div class="col-2">
+  <div id="myslide2">
+    <div class="cover2">
+      <div class="image-holder2"> <img src="images/box-2.jpg" width="281" height="174" /></div>
+      <div class="image-holder2"> <img src="images/step-2/1.jpg" width="281" height="174" /></div>
+      <div class="image-holder2"> <img src="images/step-2/2.jpg" width="281" height="174" /></div>
+      <div class="image-holder2"> <img src="images/step-2/3.jpg" width="281" height="174" /></div>
+      <div class="image-holder2"> <img src="images/step-2/4.jpg" width="281" height="174" /></div>
+      <div class="image-holder2"> <img src="images/step-2/5.jpg" width="281" height="174" /></div>
+      <div class="image-holder2"> <img src="images/step-2/6.jpg" width="281" height="174" /></div>
+    </div>
+  </div>
+  <div id="button4">
+  <h1><span class="fw-t">Step 2:</span> <a class="button1 active" rel="1" href="#">Add KonaSearch to Apps</a></h1>
+    <ul class="step-lists">
+      <li>Go to <a class="button2" rel="2" href="#">Setup</a> from User Profile Dropdown</li>
+      <li>Click <a class="button3" rel="3" href="#">Create</a> Under App Setup</li>
+      <li>Click <a class="button4" rel="4" href="#">Apps</a> Link Under Create</li>
+      <li>Click <a class="button5" rel="5" href="#">Edit</a> for Desired App</li>
+      <li><a class="button6" rel="6" href="#">Add</a> the KonaSearch Tab</li>
+      <li><a class="button7" rel="7" href="#">Save</a> the Application</li>
+    </ul>
+  </div>
+</div>
+    
+<div class="col-2">
+  <div id="myslide4">
+    <div class="cover4">
+      <div class="image-holder4"> <img src="images/box-4.jpg" width="281" height="174" /></div>
+      <div class="image-holder4"> <img src="images/step-4/1.jpg" width="281" height="174" /></div>
+      <div class="image-holder4"> <img src="images/step-4/2.jpg" width="281" height="174" /></div>
+      <div class="image-holder4"> <img src="images/step-4/3.jpg" width="281" height="174" /></div>
+      <div class="image-holder4"> <img src="images/step-4/4.jpg" width="281" height="174" /></div>
+      <div class="image-holder4"> <img src="images/step-4/5.jpg" width="281" height="174" /></div>
+      <div class="image-holder4"> <img src="images/step-4/6.jpg" width="281" height="174" /></div>
+      <div class="image-holder4"> <img src="images/step-4/7.jpg" width="281" height="174" /></div>
+      <div class="image-holder4"> <img src="images/step-4/8.jpg" width="281" height="174" /></div>
+      <div class="image-holder4"> <img src="images/step-4/9.jpg" width="281" height="174" /></div>
+      <div class="image-holder4"> <img src="images/step-4/10.jpg" width="281" height="174" /></div>
+    </div> 
+  </div>
+  <div id="button6">
+  <h1><span class="fw-t">Step 3:</span><a class="button1 active" rel="1" href="#"> Add KonaSearch Gadget</a></h1>
+    <ul class="step-lists">
+      <li>Go to <a class="button2" rel="2" href="#">Setup</a> from User Profile Dropdown</li>
+      <li>Click <a class="button3" rel="3" href="#">Customize</a> Under App Setup</li>
+      <li>Click <a class="button4" rel="4" href="#">Home</a> Under Customize</li>
+      <li>Click <a class="button5" rel="5" href="#">Home Page Layouts</a> Under Home</li>
+      <li>Click <a class="button6" rel="6" href="#">Edit</a> on Desired Layout</li>
+      <li>Check the Box for <a class="button7" rel="7" href="#">Kona Data Search UI</a></li>
+      <li>Click <a class="button8" rel="8" href="#">User Interface</a> Under App Setup</li>
+      <li>Check the Box for <a class="button9" rel="9" href="#">Sidebar on All Pages</a></li>
+      <li><a class="button10" rel="10" href="#">Save</a> the User Interface Page</li>
+    </ul>
+  </div>
+</div>
+
+<div class="col-2">
+  <div id="myslide3">
+    <div class="cover3">
+      <div class="image-holder3"> <img src="images/box-3.jpg" width="281" height="174" /></div>
+      <div class="image-holder3"> <img src="images/step-3/1.jpg" width="281" height="174" /></div>
+      <div class="image-holder3"> <img src="images/step-3/2.jpg" width="281" height="174" /></div>
+      <div class="image-holder3"> <img src="images/step-3/3.jpg" width="281" height="174" /></div>
+      <div class="image-holder3"> <img src="images/step-3/4.jpg" width="281" height="174" /></div>
+      <div class="image-holder3"> <img src="images/step-3/5.jpg" width="281" height="174" /></div>
+      <div class="image-holder3"> <img src="images/step-3/6.jpg" width="281" height="174" /></div>
+      <div class="image-holder3"> <img src="images/step-3/7.jpg" width="281" height="174" /></div>
+      <div class="image-holder3"> <img src="images/step-3/8.jpg" width="281" height="174" /></div>
+      <div class="image-holder3"> <img src="images/step-3/9.jpg" width="281" height="174" /></div>
+    </div>
+  </div>
+  <div id="button5">
+    <h1><span class="fw-t">Step 4:</span><a class="button1 active" rel="1" href="#"> Grant Access to Users</a></h1>
+      <ul class="step-lists">
+        <li>Go to <a class="button2" rel="2" href="#">Setup</a> from User Profile Dropdown</li>
+        <li>Click <a class="button3" rel="3" href="#">Manage Users</a> Under Administration Setup</li>
+        <li>Click <a class="button4" rel="4" href="#">Profiles</a> Link Under Manage Users</li>
+        <li>Click <a class="button5" rel="5" href="#">Edit</a> on a Desired Profile</li>
+        <li>Select <a class="button6" rel="6" href="#">DefaultOn</a> from the Dropdown</li>
+        <li><a class="button7" rel="7" href="#">Save</a> the User Profile at bottom of page</li>
+        <li>Select Previous <a class="button8" rel="8" href="#">Profile Name</a></li>
+        <li>Click <a class="button9" rel="9" href="#">Edit</a> Under Visualforce Page Access</li>
+        <li><a class="button10" rel="10" href="#">Add</a> the KonaDSC.KonaDataSeach Page</li>
+      </ul>  
+  </div>
+</div>
+    
+</body>
+</html>

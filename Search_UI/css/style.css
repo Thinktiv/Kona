@@ -1,0 +1,510 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+/* General styles */
+body {
+margin:0;
+padding:0;
+border:0;			/* This removes the border around the viewport in old versions of IE */
+width:100%;
+background:#fff;
+min-width:600px;    /* Minimum width of layout - remove line if not required */
+/* The min-width property does not work in old versions of Internet Explorer */
+font-size:12px;
+}
+
+/* 'widths' sub menu */
+#layoutdims {
+clear:both;
+background:#eee;
+border-top:4px solid #000;
+margin:0;
+padding:6px 15px !important;
+text-align:right;
+}
+
+/* column container */
+.colmask {
+position:relative;		/* This fixes the IE7 overflow hidden bug and stops the layout jumping out of place */
+clear:both;
+float:left;
+width:100%;			/* width of whole page */
+overflow:hidden;	/* This chops off any overhanging divs */
+margin-top:10px;
+}
+
+/* 2 column left menu settings */
+.leftmenu {
+background:none;
+}
+
+.leftmenu .colright {
+float:left;
+width:200%;
+position:relative;
+left:200px;
+background:#fff;
+}
+
+.leftmenu .col1wrap {
+float:right;
+width:50%;
+position:relative;
+right:200px;
+padding-bottom:1em;
+}
+
+.leftmenu .col1 {
+margin:0 15px 0 230px;
+position:relative;
+right:100%;
+overflow:hidden;
+padding-right: 28px;
+}
+
+.leftmenu .col2 {
+float:left;
+position:relative;
+right:185px;
+}
+
+h1 {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 24px;
+}
+
+.page-container {
+width: 100%;
+}
+
+.page-titles {
+}
+
+.kona-descrip {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 11px;
+font-weight: normal;
+color:#666666;  
+}
+
+.searchbox {
+margin-top: 10px;
+}
+
+.textInput {
+    background: url("../images/searchbox.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #000;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    height: 31px;
+    line-height: 31px;
+    padding-left: 14px;
+    vertical-align: middle;
+    width: 283px;
+}
+
+
+/*.textInput:focus, input:focus {
+    outline: medium none;
+    color: #434343;
+}*/
+
+
+.search-btn {
+background: url("../images/searchbutton.png") no-repeat scroll 0 0 transparent;
+border: none;
+cursor:pointer;
+display: inline;
+height: 31px;
+text-indent: -999px;
+width: 75px;
+font-size: 12px;
+font-family: Arial, Helvetica, sans-serif;
+vertical-align:top;
+float: left;
+font-size: 0;
+display:block;
+line-height: 0;
+
+}
+
+.question-box {
+background: url("../images/question.png") no-repeat scroll left 0 transparent;
+float: right;
+margin-top: 15px;
+height: 15px;
+}
+
+.help a {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+float: left;
+color:#015BA7;
+text-decoration: none;
+padding-left: 20px;
+padding-top: 1px;
+}
+
+.help a:hover {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+float: left;
+color:#015BA7;
+text-decoration: underline;
+padding-left: 20px;
+padding-top: 1px;
+}
+
+.question-mark {
+background: url("../images/question.png") no-repeat scroll left 0 transparent;	
+}
+
+.search-info {
+float: left;
+margin-top: 10px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+color:#999999;
+}
+
+.results-amount {
+color:#333333;
+font-weight: bold;
+}
+
+.breadcrumbs {
+font-family: Arial, Helvetica, sans-serif;
+color:#015BA7;
+text-decoration: none;
+}
+
+.breadcrumbs a {
+font-family: Arial, Helvetica, sans-serif;
+color:#015BA7;
+text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+font-family: Arial, Helvetica, sans-serif;
+color:#015BA7;
+text-decoration: underline;
+}
+
+.top-container {
+height: 100px;
+}
+
+.mid-container {
+height: 32px;
+}
+
+.pagination {
+float: right;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+color:#999999;
+margin-top: 10px;
+}
+
+.pagination ul li {
+list-style-type: none;
+display: inline;
+padding-left: 10px;
+}
+
+.pagination ul li a {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+color:#015BA7;
+text-decoration: none;
+}
+
+.pagination ul li a:hover {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+color:#015BA7;
+text-decoration: underline;
+}
+
+.pagination ul li.active a {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+color:#333333;
+font-weight: bold;
+text-decoration: none;
+}
+
+.pagination ul li.active a:hover {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+color:#333333;
+font-weight: bold;
+text-decoration: none;
+}
+
+.search-results {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+color:#333333;
+height: 500px;
+background-color: #cccccc;
+}
+
+.right-container {       
+float: right;      
+width: 80%;      
+min-width: 400px;
+}
+
+.left-container {      
+min-width: 200px;      
+height: 800px;       
+float: left;      
+background-color: blue;      
+width: 20%;
+}
+
+.kona-logo {
+background: url("../images/Kona-Logo.jpg") no-repeat scroll left 0 transparent;
+height: 26px;
+width: 200px;
+}
+
+.popbox {
+float: right;
+right:0;
+position: fixed;
+background-color: #008000;
+height:200px;
+
+z-index:100;
+top:100px;
+}
+
+.tab-container {
+width:100px;
+}
+
+.gadget-title {
+font-family:Arial,Helvetica,sans-serif;
+color:#ef433d;
+font-size:18px;
+}
+
+.gadget-content {
+margin-left:53px;
+width:194px;
+height:300px;
+margin-top:13px;
+}
+
+.gadget-sub-title {
+font-size:11px;
+font-family:Arial,Helvetica,sans-serif;
+color:#616161;
+}
+
+.gadget-content .textInput
+{
+background: url("../images/gadget-searchbox.png") no-repeat scroll 0 0 transparent;
+color: #b0b0b0;
+height: 22px;
+width: 188px;
+border: none;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px; 
+padding-left: 14px;
+border: none;
+float: left;
+vertical-align: middle;
+line-height: 24px;
+margin-top:7px;
+}
+
+.textInput:focus, input:focus{
+outline:none
+}
+
+.gadget-search-btn {
+background: url("../images/gadget-search-btn.png") no-repeat scroll 0 0 transparent;
+border: none;
+cursor:pointer;
+display: inline;
+height: 22px;
+text-indent: -999px;
+width: 21px;
+font-size: 12px;
+font-family: Arial, Helvetica, sans-serif;
+vertical-align:top;
+float: left;
+font-size: 0;
+display:block;
+line-height: 0;
+position:absolute;
+z-index:1002;
+margin-left:167px;
+margin-top:7px;
+}
+
+.gadget-search {
+height:21px;
+}
+
+.results-number {
+font-size:11px;
+font-family:Arial,Helvetica,sans-serif;
+color:#616161;
+margin-top:15px;
+}
+
+.results-bold {
+font-size:11px;
+font-family:Arial,Helvetica,sans-serif;
+color:#333333;
+font-weight:bold;
+}
+
+.gadget-content table {
+font-size:11px;
+font-family:Arial,Helvetica,sans-serif;
+color:#333333;
+font-weight:bold;
+border:none;
+margin-top:6px;
+}
+
+.gadget-table-col {
+height:21px;
+width:192px;
+}
+
+.gadget-table-col-1 {
+padding-left: 7px;
+padding-top: 3px;
+padding-bottom:8px;
+width: 80px;
+font-weight:700;
+background: url("../images/gadget-table-col.png") no-repeat 0 0;
+}
+
+.gadget-table-col-2 {
+background: url("../images/gadget-table-col.png") no-repeat scroll -80px 0 transparent;
+font-weight: 700;
+padding-left: 7px;
+padding-top: 3px;
+width: 112px;
+}
+
+td.objectname a {
+color: #2E4C60;
+font-size: 11px;
+font-weight: 700;
+line-height: 17px;
+text-decoration:none;
+}
+
+td.objectname a:hover {
+text-decoration:underline;
+}
+
+td.namefield a {
+color: #2E4C60;
+font-size: 11px;
+font-weight: 700;
+line-height: 17px;
+text-decoration:none;
+}
+
+td.namefield a:hover {
+text-decoration:underline;
+}
+
+.mt-10 {
+margin-top:10px;
+}
+
+.gadget-poweredby {
+background: url("../images/gadget-poweredby.png") no-repeat 0 0 transparent;
+width:92px;
+height:31px;
+margin-top:20px;
+}
+
+.hideextra { 
+white-space: nowrap; 
+overflow: hidden; 
+text-overflow:ellipsis;
+width:100px;
+text-indent:7px; 
+}
+
+.hideextra-obj { 
+white-space: nowrap; 
+overflow: hidden; 
+text-overflow:ellipsis;
+width:70px;
+text-indent:7px; 
+}
+
+.gadget-contract-btn {
+    background: url("../images/gadget-contract-btn.png") no-repeat scroll 0 0 transparent;
+    height: 23px;
+    margin-left: 215px;
+    margin-top: 323px;
+    position: absolute;
+    width: 22px;
+		cursor:pointer;
+}
+/* Sliding Tab Structure */
+
+ #examples {
+    float: left;
+    width: 375px;
+  }
+  #code {
+    float: left;
+    width: 560px;
+  }
+  #code pre {
+    width: 560px;
+    overflow: auto;
+  }
+  .slide {
+      float: right;
+      height: 390px;
+      margin-top: 139px;
+      overflow: hidden;
+      position: fixed;
+      right: 0;
+      width: 256px;
+      z-index: 1000;
+  }
+  .slide #inner {
+      background:url("../images/BG-Gadget.png") no-repeat scroll 0 0 transparent;
+      bottom: 0;
+      color: #333333;
+      height: 387px;
+      left: 0;
+      position: absolute;
+      width: 256px;
+  }
+
+  .slide button {
+      background: none;
+      border: none;
+      height: 179px;
+      margin-left: 2px;
+      margin-top: 30px;
+      position: absolute;
+      width: 31px;
+      z-index: 1001;
+      cursor:pointer;
+      outline:none;
+  }
+  .js #slidebottom .inner { 
+    display: none;
+  }

@@ -1,0 +1,640 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Kona DataSearch</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/base.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/search.css" media="all">
+<script type=text/javascript>  function toggle() {    var ele = document.getElementById("kdsNewMenu");    if(ele.style.display == "block") {      ele.style.display = "none";    } else {      ele.style.display = "block";    }}</script>
+<script type="text/javascript" src="scripts/util-functions.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
+
+<!--[if lt IE 7]>
+    <style media="screen" type="text/css">
+    .col1 {
+	    width:100% !important;
+	}
+    </style>
+    
+    <![endif]-->
+
+    
+    <script type="text/javascript">
+      document.documentElement.className = 'js';
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	
+	
+	
+    $(document).ready(function() {
+  
+    var isOpen = false;
+  		
+  		watermark();
+	function watermark() {
+	    // Set the watermark var
+  		var watermark_label = 'What are you looking for?';
+  		// Set the query param var
+		var q = getUrlVars()['q'];
+  		
+		// The field in question
+		var field = 'form.main-search input.textInput';
+  		
+		// Check the state of the query param
+  		if(getUrlVars()['q'] == null) {
+  			
+			// There is no query param so set the watermark
+			// style the watermark
+			$(field).css('color', '#B9B9B9');
+  			$(field).val(watermark_label);
+  		}
+  		else {
+			// There is a query param so set the field value to the query
+			// style the field
+  			$(field).val(q);
+  			$(this).css('color', '#000');
+  			
+  		}
+  		
+		// Focus into the field 
+  		$(field).live('click', function(){
+  			if($(this).val() == watermark_label) {
+				// Clear if the watermark is present
+				// style the field
+  				$(this).val('');
+  				$(this).css('color', '#000');
+  			} else {
+				// Maintain the query in the field
+  				$(this).val(q);
+  			}
+  		});
+		
+		// Focus out of the field 
+		$(field).live('focusout', function(){
+  			if($(this).val() == '') {
+				// Replace the watermark if the field is empty
+				// style the field
+  				$(this).val(watermark_label);
+  				$(this).css('color', '#B9B9B9');
+  			} else {
+				// Maintain the query in the field
+				// style the field
+  				$(this).val(q);
+				$(this).css('color', '#000');
+  			}
+  		});
+	}
+  		
+	  		function getUrlVars()
+			{
+			    var vars = [], hash;
+			    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+			    for(var i = 0; i < hashes.length; i++)
+			    {
+			        hash = hashes[i].split('=');
+			        vars.push(hash[0]);
+			        vars[hash[0]] = hash[1];
+			    }
+			    return vars;
+			}
+  		
+		truncate_values();
+		function truncate_values() {
+			var rows = $('.result-background table td.fieldvalue');
+			$.each(rows, function(index, value){
+				//alert($(value).text());
+				var length = 5;
+				var myString = $(value).text();
+				var myTruncatedString = myString.substring(0, length);
+				$(value).text(evaluate_length(myTruncatedString, length));
+			});
+		}
+
+			function evaluate_length(string, s_length) {
+				var length = string.length;
+				if(length >= s_length) {
+					return string + '...';
+				} else {
+					return string;
+				}
+			}
+		
+      $('#inner button').click(function() {
+        
+        if (isOpen == true ) {
+          $(this).parent().animate({marginLeft: 223});
+          isOpen = false;
+        }
+        
+        else if (isOpen ==false) {
+          $(this).parent().animate({marginLeft: 0});
+          isOpen = true;
+        }
+
+      }); 
+      
+      $('#inner .gadget-contract-btn').click(function() {
+        
+        if (isOpen == true ) {
+          $(this).parent().animate({marginLeft: 223});
+          isOpen = false;
+        }
+        
+        else if (isOpen ==false) {
+          $(this).parent().animate({marginLeft: 0});
+          isOpen = true;
+        }
+
+      });
+		
+    });
+    
+    
+    </script>
+	
+</head>
+<body>
+  
+  <!-- START KONASEARCH TAB -->
+  
+  <div id="slidemarginleft" class="slide">
+    
+    <div id="inner" style="margin-left:223px">
+      <button></button>
+      <div class="gadget-contract-btn"></div>
+      <div class="gadget-content">
+        <h1 class="gadget-title">KonaSearch</h1>
+        <p class="gadget-sub-title"><strong>Information Sources:</strong> Sales Cloud</p>
+        <div class="gadget-search">
+          <form>
+            <input type="text" value="Search Salesforce" class="textInput cleardefault" name="field">
+            <input type="submit" class="gadget-search-btn" value="Submit">
+          </form>
+        </div>
+        <p class="results-number">Showing <span class="results-bold">10</span> of <span class="results-bold">182</span> Results</p>
+        <table width="192px" border="0" cellspacing="0" cellpadding="0">
+          <tr class="gadget-table-col">
+            <td class="gadget-table-col-1">Object</td>
+            <td class="gadget-table-col-2">Name</td>
+          </tr>
+          <tr>
+            <td class="objectname"><div class="hideextra-obj"><a href="#">Case</a></div></td>
+            <td class="namefield"><div class="hideextra"><a href="#">00001180</a></div></td>
+          </tr>
+          <tr>
+            <td class="objectname"><a href="#"><div class="hideextra-obj">Task</a></div></td>
+            <td class="namefield"><div class="hideextra"><a href="#">Approve November Timesheet</a></div></td>
+          </tr>
+          <tr>
+            <td class="objectname"><a href="#"><div class="hideextra-obj">Opportunity</a></div></td>
+            <td class="namefield"><div class="hideextra"><a href="#">Thomas Resorts</a></div></td>
+          </tr>
+          <tr>
+            <td class="objectname"><a href="#"><div class="hideextra-obj">Contact</a></div></td>
+            <td class="namefield"><div class="hideextra"><a href="#">Janet Sernicki</a></div></td>
+          </tr>
+          <tr>
+            <td class="objectname"><a href="#"><div class="hideextra-obj">Case</a></div></td>
+            <td class="namefield"><div class="hideextra"><a href="#">null</a></div></td>
+          </tr>
+          <tr>
+            <td class="objectname"><a href="#"><div class="hideextra-obj">Task</a></div></td>
+            <td class="namefield"><div class="hideextra"><a href="#">00001180</a></div></td>
+          </tr>
+          <tr>
+            <td class="objectname"><a href="#"><div class="hideextra-obj">Opportunity</a></div></td>
+            <td class="namefield"><div class="hideextra"><a href="#">Approve December Timesheet</a></div></td>
+          </tr>
+          <tr>
+            <td class="objectname"><a href="#"><div class="hideextra-obj">Contact</a></div></td>
+            <td class="namefield"><div class="hideextra"><a href="#">Thomas Resorts</a></div></td>
+          </tr>
+          <tr>
+            <td class="objectname"><a href="#"><div class="hideextra-obj">Case</a></div></td>
+            <td class="namefield"><div class="hideextra"><a href="#">Janet Sernicki</a></div></td>
+          </tr>
+          <tr>
+            <td class="objectname"><a href="#"><div class="hideextra-obj">Task</a></div></td>
+            <td class="namefield"><div class="hideextra"><a href="#">null</a></div></td>
+          </tr>
+        </table>
+        
+        <div class="gadget-poweredby"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+<!-- END KONASEARCH TAB -->
+
+<!-- START LAYOUT --> 
+
+<div class="colmask leftmenu">
+  <div class="colright">
+    <div class="col1wrap">
+      <div class="col1"> 
+
+        
+        <!-- START TOP CONTAINER -->
+        
+        <div class="top-container">
+          <div class="page-titles">
+            <h1>KonaSearch</h1>
+            <p class="kona-descrip"><strong>Information Sources:</strong> Salesforce, Outlook, SharePoint</p>
+          </div>
+          <div class="searchbox">
+            <form method="get" name="searchForm" class="main-search">
+              <input type="text" name="q" class="textInput cleardefault" value="" />
+              <input type="submit" value="Submit" class="search-btn">
+            </form>
+            <div class="question-box"> <span class="help"><a href="#">Help</a></span> </div>
+          </div>
+        </div>
+        
+        <!-- END TOP CONTAINER --> 
+        
+        
+        
+        <!-- START MID CONTAINER -->
+        
+        <div class="mid-container"> <span class="search-info"> Showing <span class="results-amount">1-10</span> of <span class="results-amount">182</span> results in <span class="breadcrumbs"><a href="#">All Objects</a></span> &rsaquo; <span class="breadcrumbs"><a href="#">Case</a></span></span> <span class="pagination">
+          <ul>
+            <li><a href="#">&lsaquo;&lsaquo; Prev</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">Next &rsaquo;&rsaquo;</a></li>
+          </ul>
+          </span> </div>
+        
+        <!-- END MID CONTAINER --> 
+        
+        <!-- START SEARCH CONTAINER -->
+        
+        <div class="result-background">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr class="results-header">
+              <td class="cellbg-first" width="5%">Action</td>
+              <td class="cellbg" width="15%">Object</td>
+              <td class="cellbg" width="20%">Name</td>
+              <td class="cellbg-middle" colspan="2">Details</td>
+              <td class="cellbg-last" colspan="2">&nbsp;</td>
+            </tr>
+            <tr class="results">
+              <td class="cl"><a href="#">Edit</a></td>
+              <td class="cm">Opportunity </td>
+              <td class="cm"><a target="_parent" href="https://na9.sfieldnameesforce.com/006E0000002buqMIAQ">Thomas Resorts Q2</a></td>
+              <td class="fieldname cm-blank" width="10%">Account:</td>
+              <td class="fieldvalue cm" width="20%">Thomson Resorts, Ltd.</td>
+              <td class="fieldname cm-blank" width="10%">Value: </td>
+              <td class="fieldvalue cm" width="20%">6529.6</td>
+            </tr>
+            <tr class="results">
+              <td class="cl">&nbsp;</td>
+              <td class="cm">&nbsp;</td>
+              <td class="cm">&nbsp;</td>
+              <td class="fieldname cm-blank">Contact: </td>
+              <td class="fieldvalue cm">Janet Sernicki</td>
+              <td class="fieldname cm-blank">Stage: </td>
+              <td class="fieldvalue cm">Prospecting</td>
+            </tr>
+            <tr class="results">
+              <td class="cb">&nbsp;</td>
+              <td class="cbm">&nbsp;</td>
+              <td class="cbm">&nbsp;</td>
+              <td class="fieldname cbmr">Phone:</td>
+              <td class="fieldvalue cbm"> (555) 123-7721</td>
+              <td class="fieldname cbmr">Close Date:  </td>
+              <td class="fieldvalue cbm">2011-09-08</td>
+           </tr>
+           <tr class="results">
+             <td class="cl"><a href="#">Edit</a></td>
+             <td class="cm">Opportunity </td>
+             <td class="cm"><a target="_parent" href="https://na9.sfieldnameesforce.com/006E0000002buqMIAQ">Thomas Resorts Q2</a></td>
+             <td class="fieldname cm-blank" width="10%">Account:</td>
+             <td class="fieldvalue cm"width="20%"> Thomson Resorts, Ltd.</td>
+             <td class="fieldname cm-blank" width="10%">Value: </td>
+             <td class="fieldvalue cm" width="20%">6529.6</td>
+           </tr>
+           <tr class="results">
+             <td class="cl">&nbsp;</td>
+             <td class="cm">&nbsp;</td>
+             <td class="cm">&nbsp;</td>
+             <td class="fieldname cm-blank">Contact: </td>
+             <td class="fieldvalue cm">Janet Sernicki</td>
+             <td class="fieldname cm-blank">Stage: </td>
+             <td class="fieldvalue cm">Prospecting</td>
+           </tr>
+           <tr class="results">
+             <td class="cb">&nbsp;</td>
+             <td class="cbm">&nbsp;</td>
+             <td class="cbm">&nbsp;</td>
+             <td class="fieldname cbmr">Phone:</td>
+             <td class="fieldvalue cbm"> (555) 123-7721</td>
+             <td class="fieldname cbmr">Close Date:  </td>
+             <td class="fieldvalue cbm">2011-09-08</td>
+          </tr>
+          <tr class="results">
+            <td class="cl"><a href="#">Edit</a></td>
+            <td class="cm">Opportunity </td>
+            <td class="cm"><a target="_parent" href="https://na9.sfieldnameesforce.com/006E0000002buqMIAQ">Thomas Resorts Q2</a></td>
+            <td class="fieldname cm-blank" width="10%">Account:</td>
+            <td class="fieldvalue cm"width="20%"> Thomson Resorts, Ltd.</td>
+            <td class="fieldname cm-blank" width="10%">Value: </td>
+            <td class="fieldvalue cm" width="20%">6529.6</td>
+          </tr>
+          <tr class="results">
+            <td class="cl">&nbsp;</td>
+            <td class="cm">&nbsp;</td>
+            <td class="cm">&nbsp;</td>
+            <td class="fieldname cm-blank">Contact: </td>
+            <td class="fieldvalue cm">Janet Sernicki</td>
+            <td class="fieldname cm-blank">Stage: </td>
+            <td class="fieldvalue cm">Prospecting</td>
+          </tr>
+          <tr class="results">
+            <td class="cb">&nbsp;</td>
+            <td class="cbm">&nbsp;</td>
+            <td class="cbm">&nbsp;</td>
+            <td class="fieldname cbmr">Phone:</td>
+            <td class="fieldvalue cbm"> (555) 123-7721</td>
+            <td class="fieldname cbmr">Close Date:  </td>
+            <td class="fieldvalue cbm">2011-09-08</td>
+         </tr>
+         <tr class="results">
+           <td class="cl"><a href="#">Edit</a></td>
+           <td class="cm">Opportunity </td>
+           <td class="cm"><a target="_parent" href="https://na9.sfieldnameesforce.com/006E0000002buqMIAQ">Thomas Resorts Q2</a></td>
+           <td class="fieldname cm-blank" width="10%">Account:</td>
+           <td class="fieldvalue cm"width="20%"> Thomson Resorts, Ltd.</td>
+           <td class="fieldname cm-blank" width="10%">Value: </td>
+           <td class="fieldvalue cm" width="20%">6529.6</td>
+         </tr>
+         <tr class="results">
+           <td class="cl">&nbsp;</td>
+           <td class="cm">&nbsp;</td>
+           <td class="cm">&nbsp;</td>
+           <td class="fieldname cm-blank">Contact: </td>
+           <td class="fieldvalue cm">Janet Sernicki</td>
+           <td class="fieldname cm-blank">Stage: </td>
+           <td class="fieldvalue cm">Prospecting</td>
+         </tr>
+         <tr class="results">
+           <td class="cb">&nbsp;</td>
+           <td class="cbm">&nbsp;</td>
+           <td class="cbm">&nbsp;</td>
+           <td class="fieldname cbmr">Phone:</td>
+           <td class="fieldvalue cbm"> (555) 123-7721</td>
+           <td class="fieldname cbmr">Close Date:  </td>
+           <td class="fieldvalue cbm">2011-09-08</td>
+        </tr>
+        <tr class="results">
+          <td class="cl"><a href="#">Edit</a></td>
+          <td class="cm">Opportunity </td>
+          <td class="cm"><a target="_parent" href="https://na9.sfieldnameesforce.com/006E0000002buqMIAQ">Thomas Resorts Q2</a></td>
+          <td class="fieldname cm-blank" width="10%">Account:</td>
+          <td class="fieldvalue cm"width="20%"> Thomson Resorts, Ltd.</td>
+          <td class="fieldname cm-blank" width="10%">Value: </td>
+          <td class="fieldvalue cm" width="20%">6529.6</td>
+        </tr>
+        <tr class="results">
+          <td class="cl">&nbsp;</td>
+          <td class="cm">&nbsp;</td>
+          <td class="cm">&nbsp;</td>
+          <td class="fieldname cm-blank">Contact: </td>
+          <td class="fieldvalue cm">Janet Sernicki</td>
+          <td class="fieldname cm-blank">Stage: </td>
+          <td class="fieldvalue cm">Prospecting</td>
+        </tr>
+        <tr class="results">
+          <td class="cb">&nbsp;</td>
+          <td class="cbm">&nbsp;</td>
+          <td class="cbm">&nbsp;</td>
+          <td class="fieldname cbmr">Phone:</td>
+          <td class="fieldvalue cbm"> (555) 123-7721</td>
+          <td class="fieldname cbmr">Close Date:  </td>
+          <td class="fieldvalue cbm">2011-09-08</td>
+        </tr>
+        <tr class="results">
+          <td class="cl"><a href="#">Edit</a></td>
+          <td class="cm">Opportunity </td>
+          <td class="cm"><a target="_parent" href="https://na9.sfieldnameesforce.com/006E0000002buqMIAQ">Thomas Resorts Q2</a></td>
+          <td class="fieldname cm-blank" width="10%">Account:</td>
+          <td class="fieldvalue cm"width="20%"> Thomson Resorts, Ltd.</td>
+          <td class="fieldname cm-blank" width="10%">Value: </td>
+          <td class="fieldvalue cm" width="20%">6529.6</td>
+        </tr>
+        <tr class="results">
+          <td class="cl">&nbsp;</td>
+          <td class="cm">&nbsp;</td>
+          <td class="cm">&nbsp;</td>
+          <td class="fieldname cm-blank">Contact: </td>
+          <td class="fieldvalue cm">Janet Sernicki</td>
+          <td class="fieldname cm-blank">Stage: </td>
+          <td class="fieldvalue cm">Prospecting</td>
+        </tr>
+        <tr class="results">
+          <td class="cb">&nbsp;</td>
+          <td class="cbm">&nbsp;</td>
+          <td class="cbm">&nbsp;</td>
+          <td class="fieldname cbmr">Phone:</td>
+          <td class="fieldvalue cbm"> (555) 123-7721</td>
+          <td class="fieldname cbmr">Close Date:  </td>
+          <td class="fieldvalue cbm">2011-09-08</td>
+        </tr>
+        <tr class="results">
+          <td class="cl"><a href="#">Edit</a></td>
+          <td class="cm">Opportunity </td>
+          <td class="cm"><a target="_parent" href="https://na9.sfieldnameesforce.com/006E0000002buqMIAQ">Thomas Resorts Q2</a></td>
+          <td class="fieldname cm-blank" width="10%">Account:</td>
+          <td class="fieldvalue cm"width="20%"> Thomson Resorts, Ltd.</td>
+          <td class="fieldname cm-blank" width="10%">Value: </td>
+          <td class="fieldvalue cm" width="20%">6529.6</td>
+        </tr>
+        <tr class="results">
+          <td class="cl">&nbsp;</td>
+          <td class="cm">&nbsp;</td>
+          <td class="cm">&nbsp;</td>
+          <td class="fieldname cm-blank">Contact: </td>
+          <td class="fieldvalue cm">Janet Sernicki</td>
+          <td class="fieldname cm-blank">Stage: </td>
+          <td class="fieldvalue cm">Prospecting</td>
+        </tr>
+        <tr class="results">
+          <td class="cb">&nbsp;</td>
+          <td class="cbm">&nbsp;</td>
+          <td class="cbm">&nbsp;</td>
+          <td class="fieldname cbmr">Phone:</td>
+          <td class="fieldvalue cbm"> (555) 123-7721</td>
+          <td class="fieldname cbmr">Close Date:  </td>
+          <td class="fieldvalue cbm">2011-09-08</td>
+        </tr>
+        <tr class="results">
+          <td class="cl"><a href="#">Edit</a></td>
+          <td class="cm">Opportunity </td>
+          <td class="cm"><a target="_parent" href="https://na9.sfieldnameesforce.com/006E0000002buqMIAQ">Thomas Resorts Q2</a></td>
+          <td class="fieldname cm-blank" width="10%">Account:</td>
+          <td class="fieldvalue cm"width="20%"> Thomson Resorts, Ltd.</td>
+          <td class="fieldname cm-blank" width="10%">Value: </td>
+          <td class="fieldvalue cm" width="20%">6529.6</td>
+        </tr>
+        <tr class="results">
+          <td class="cl">&nbsp;</td>
+          <td class="cm">&nbsp;</td>
+          <td class="cm">&nbsp;</td>
+          <td class="fieldname cm-blank">Contact: </td>
+          <td class="fieldvalue cm">Janet Sernicki</td>
+          <td class="fieldname cm-blank">Stage: </td>
+          <td class="fieldvalue cm">Prospecting</td>
+        </tr>
+        <tr class="results">
+          <td class="cb">&nbsp;</td>
+          <td class="cbm">&nbsp;</td>
+          <td class="cbm">&nbsp;</td>
+          <td class="fieldname cbmr">Phone:</td>
+          <td class="fieldvalue cbm"> (555) 123-7721</td>
+          <td class="fieldname cbmr">Close Date:  </td>
+          <td class="fieldvalue cbm">2011-09-08</td>
+        </tr>
+        <tr class="results">
+          <td class="cl"><a href="#">Edit</a></td>
+          <td class="cm">Opportunity </td>
+          <td class="cm"><a target="_parent" href="https://na9.sfieldnameesforce.com/006E0000002buqMIAQ">Thomas Resorts Q2</a></td>
+          <td class="fieldname cm-blank" width="10%">Account:</td>
+          <td class="fieldvalue cm"width="20%"> Thomson Resorts, Ltd.</td>
+          <td class="fieldname cm-blank" width="10%">Value: </td>
+          <td class="fieldvalue cm" width="20%">6529.6</td>
+        </tr>
+        <tr class="results">
+          <td class="cl">&nbsp;</td>
+          <td class="cm">&nbsp;</td>
+          <td class="cm">&nbsp;</td>
+          <td class="fieldname cm-blank">Contact: </td>
+          <td class="fieldvalue cm">Janet Sernicki</td>
+          <td class="fieldname cm-blank">Stage: </td>
+          <td class="fieldvalue cm">Prospecting</td>
+        </tr>
+        <tr class="results">
+          <td class="cb">&nbsp;</td>
+          <td class="cbm">&nbsp;</td>
+          <td class="cbm">&nbsp;</td>
+          <td class="fieldname cbmr">Phone:</td>
+          <td class="fieldvalue cbm"> (555) 123-7721</td>
+          <td class="fieldname cbmr">Close Date:  </td>
+          <td class="fieldvalue cbm">2011-09-08</td>
+        </tr>
+        <tr class="results">
+          <td class="cl"><a href="#">Edit</a></td>
+          <td class="cm">Opportunity </td>
+          <td class="cm"><a target="_parent" href="https://na9.sfieldnameesforce.com/006E0000002buqMIAQ">Thomas Resorts Q2</a></td>
+          <td class="fieldname cm-blank" width="10%">Account:</td>
+          <td class="fieldvalue cm"width="20%"> Thomson Resorts, Ltd.</td>
+          <td class="fieldname cm-blank" width="10%">Value: </td>
+          <td class="fieldvalue cm" width="20%">6529.6</td>
+        </tr>
+        <tr class="results">
+          <td class="cl">&nbsp;</td>
+          <td class="cm">&nbsp;</td>
+          <td class="cm">&nbsp;</td>
+          <td class="fieldname cm-blank">Contact: </td>
+          <td class="fieldvalue cm">Janet Sernicki</td>
+          <td class="fieldname cm-blank">Stage: </td>
+          <td class="fieldvalue cm">Prospecting</td>
+        </tr>
+        <tr class="results">
+          <td class="cb">&nbsp;</td>
+          <td class="cbm">&nbsp;</td>
+          <td class="cbm">&nbsp;</td>
+          <td class="fieldname cbmr">Phone:</td>
+          <td class="fieldvalue cbm"> (555) 123-7721</td>
+          <td class="fieldname cbmr">Close Date:  </td>
+          <td class="fieldvalue cbm">2011-09-08</td>
+        </tr>
+
+
+
+          </table>
+
+        </div>
+        
+        <!-- END SEARCH CONTAINER --> 
+        
+        <!-- START BOTTOM CONTAINER -->
+        
+        <div class="mid-container"> <span class="search-info"> Showing <span class="results-amount">1-10</span> of <span class="results-amount">182</span> results in <span class="breadcrumbs"><a href="#">All Objects</a></span> &rsaquo; <span class="breadcrumbs"><a href="#">Case</a></span></span> <span class="pagination">
+          <ul>
+            <li><a href="#">&lsaquo;&lsaquo; Prev</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">Next &rsaquo;&rsaquo;</a></li>
+          </ul>
+          </span> </div>
+        
+        <!-- END BOTTOM CONTAINER --> 
+        
+        <!-- Column 2 end --> 
+      </div>
+    </div>
+    <div class="col2"> 
+      <!-- Column 1 start -->
+      <div id="nav"><!-- SFDC CREATE NEW SECTION -->
+        <div class="newNav">
+          <div>
+            <div class="NewNav1" id="kdscreateNew" onClick="javascript:toggle();return false;">
+              <div class="NewNav2" id="kdscreateNewButton"> <span id="createNewLabel">Create New...</span> </div>
+              <div style="display: none;" class="NewNav3" id="kdsNewMenu"> <a class="NewNav4" target="_parent" href="https://na9.salesforce.com/00U/e"><img src="images/s.gif" alt="Event" class="NewNavMenuImages" title="Event"> Event</a> <a class="NewNav5" target="_parent" href="https://na9.salesforce.com/00T/e"><img src="images/s.gif" alt="Task" class="NewNavMenuImages" title="Task"> Task</a> <a class="NewNav6" target="_parent" href="https://na9.salesforce.com/00Q/e"><img src="images/s.gif" alt="Lead" class="NewNavMenuImages" title="Lead"> Lead</a> <a class="NewNav7" target="_parent" href="https://na9.salesforce.com/001/e"><img src="images/s.gif" alt="Account" class="NewNavMenuImages" title="Account"> Account</a> <a class="NewNav8" target="_parent" href="https://na9.salesforce.com/003/e"><img src="images/s.gif" alt="Contact" class="NewNavMenuImages" title="Contact"> Contact</a> <a class="NewNav9" target="_parent" href="https://na9.salesforce.com/006/e"><img src="images/s.gif" alt="Opportunity" class="NewNavMenuImages" title="Opportunity"> Opportunity</a> <a class="NewNav10" target="_parent" href="https://na9.salesforce.com/800/e"><img src="images/s.gif" alt="Contract" class="NewNavMenuImages" title="Contract"> Contract</a> <a class="NewNav11" target="_parent" href="https://na9.salesforce.com/500/e"><img src="images/s.gif" alt="Case" class="NewNavMenuImages" title="Case"> Case</a> </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div><b class="navHeader"><b class="navHeader1"><b></b></b><b class="navHeader2"><b></b></b><b class="navHeader3"></b><b class="navHeader4"></b><b class="navHeader5"></b></b>
+          <div class="navHeaderfg">Objects</div>
+          <b class="navHeader"><b class="navHeader5"></b><b class="navHeader4"></b><b class="navHeader3"></b><b class="navHeader2"><b></b></b><b class="navHeader1"><b></b></b></b></div>
+        <div id="spacer"></div>
+        <div><b class="navs"><b class="navs1"><b></b></b><b class="navs2"><b></b></b><b class="navs3"></b><b class="navs4"></b><b class="navs5"></b></b>
+          <div class="navsfg">
+            <ul id="fbucket">
+              <li id="fbLabel"><a href="https://ec2-50-16-167-117.compute-1.amazonaws.com:17000/konadscui/konasearch?q=*&amp;facet.filters=table%3ACase&amp;K0=00DE0000000Ie7GMAS&amp;token=mNe%2FPqOKiZKEZnFVJyyP3Re8L%2F1kVi9WBOutw9jt0sO5O9wE5uQnqcsEe%2F860DYPFcZ%2FgpvRqyA%2F%0D%0AkIc3l8gmUoPKe665zYOzrvK0ioV%2BWDslg59wZiNF75FcieEiHnwLsYNSLDbuHpnIDdyBZ3nxX0hA%0D%0AozUyugjz%2BZbyle67uS8JDwgDVyqcc7L%2FKyDtHENeWdjFAq5xV1Ci4WBCjWCnCw%3D%3D%0D%0A">Case</a></li>
+              <li id="fbCount">5</li>
+            </ul>
+            <ul id="fbucket">
+              <li id="fbLabel"><a href="https://ec2-50-16-167-117.compute-1.amazonaws.com:17000/konadscui/konasearch?q=*&amp;facet.filters=table%3ATask&amp;K0=00DE0000000Ie7GMAS&amp;token=mNe%2FPqOKiZKEZnFVJyyP3Re8L%2F1kVi9WBOutw9jt0sO5O9wE5uQnqcsEe%2F860DYPFcZ%2FgpvRqyA%2F%0D%0AkIc3l8gmUoPKe665zYOzrvK0ioV%2BWDslg59wZiNF75FcieEiHnwLsYNSLDbuHpnIDdyBZ3nxX0hA%0D%0AozUyugjz%2BZbyle67uS8JDwgDVyqcc7L%2FKyDtHENeWdjFAq5xV1Ci4WBCjWCnCw%3D%3D%0D%0A">Task</a></li>
+              <li id="fbCount">4</li>
+            </ul>
+            <ul id="fbucket">
+              <li id="fbLabel"><a href="https://ec2-50-16-167-117.compute-1.amazonaws.com:17000/konadscui/konasearch?q=*&amp;facet.filters=table%3AAccount&amp;K0=00DE0000000Ie7GMAS&amp;token=mNe%2FPqOKiZKEZnFVJyyP3Re8L%2F1kVi9WBOutw9jt0sO5O9wE5uQnqcsEe%2F860DYPFcZ%2FgpvRqyA%2F%0D%0AkIc3l8gmUoPKe665zYOzrvK0ioV%2BWDslg59wZiNF75FcieEiHnwLsYNSLDbuHpnIDdyBZ3nxX0hA%0D%0AozUyugjz%2BZbyle67uS8JDwgDVyqcc7L%2FKyDtHENeWdjFAq5xV1Ci4WBCjWCnCw%3D%3D%0D%0A">Account</a></li>
+              <li id="fbCount">1</li>
+            </ul>
+            <ul id="fbucket">
+              <li id="fbLabel"><a href="https://ec2-50-16-167-117.compute-1.amazonaws.com:17000/konadscui/konasearch?q=*&amp;facet.filters=table%3AContact&amp;K0=00DE0000000Ie7GMAS&amp;token=mNe%2FPqOKiZKEZnFVJyyP3Re8L%2F1kVi9WBOutw9jt0sO5O9wE5uQnqcsEe%2F860DYPFcZ%2FgpvRqyA%2F%0D%0AkIc3l8gmUoPKe665zYOzrvK0ioV%2BWDslg59wZiNF75FcieEiHnwLsYNSLDbuHpnIDdyBZ3nxX0hA%0D%0AozUyugjz%2BZbyle67uS8JDwgDVyqcc7L%2FKyDtHENeWdjFAq5xV1Ci4WBCjWCnCw%3D%3D%0D%0A">Contact</a></li>
+              <li id="fbCount">1</li>
+            </ul>
+            <ul id="fbucket">
+              <li id="fbLabel"><a href="https://ec2-50-16-167-117.compute-1.amazonaws.com:17000/konadscui/konasearch?q=*&amp;facet.filters=table%3AOpportunity&amp;K0=00DE0000000Ie7GMAS&amp;token=mNe%2FPqOKiZKEZnFVJyyP3Re8L%2F1kVi9WBOutw9jt0sO5O9wE5uQnqcsEe%2F860DYPFcZ%2FgpvRqyA%2F%0D%0AkIc3l8gmUoPKe665zYOzrvK0ioV%2BWDslg59wZiNF75FcieEiHnwLsYNSLDbuHpnIDdyBZ3nxX0hA%0D%0AozUyugjz%2BZbyle67uS8JDwgDVyqcc7L%2FKyDtHENeWdjFAq5xV1Ci4WBCjWCnCw%3D%3D%0D%0A">Opportunity</a></li>
+              <li id="fbCount">1</li>
+            </ul>
+          </div>
+          <b class="navs"><b class="navs5"></b><b class="navs4"></b><b class="navs3"></b><b class="navs2"><b></b></b><b class="navs1"><b></b></b></b></div>
+        <br>
+        <div><b class="recycleNav"><b class="recycleNav1"><b></b></b><b class="recycleNav2"><b></b></b><b class="recycleNav3"></b><b class="recycleNav4"></b><b class="recycleNav5"></b></b>
+          <div class="recycleNavfg"><a target="_parent" style="color: rgb(51, 102, 0); text-decoration: none;" href="https://na9.salesforce.com/search/UndeletePage"><img style="border: 0pt none; background-image: url('images/recycle.gif'); background-position: 0px 0px; width: 19px; height: 19px; margin-right: 7px;" src="images/s.gif" alt="Recycle Bin" title="Recycle Bin"><span style="text-decoration: none; vertical-align: 5px;">Recycle Bin</span></a></div>
+          <b class="recycleNav"><b class="recycleNav5"></b><b class="recycleNav4"></b><b class="recycleNav3"></b><b class="recycleNav2"><b></b></b><b class="recycleNav1"><b></b></b></b></div>
+      </div>
+      <div class="kona-logo"></div>
+      
+      <!-- Column 1 end --> 
+      
+    </div>
+  </div>
+</div>
+</body>
+</html>

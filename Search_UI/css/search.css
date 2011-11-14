@@ -1,0 +1,110 @@
+/* NEW SEARCH RESULTS STYLING */
+
+	.fieldname {
+  	text-align: left;
+  	color:#808080;
+  }
+  .results {
+  	font-family:Arial, Helvetica, sans-serif;
+  	font-size:12px;	
+  }
+  .results td {
+  	padding-top:3px;
+  	padding-right:3px;
+  	padding-bottom:3px;
+  	padding-left:5px;
+  }
+  .results-header td {
+  	padding-left:5px;
+		padding-right:5px;
+		vertical-align:middle;
+  }
+  .results a {
+  	color:#015BA7;
+  	font-family:Arial, Helvetica, sans-serif;
+  	font-size:12px;
+  	text-decoration:none;	
+  }
+  .results a:hover {
+  	color:#015BA7;
+  	font-family:Arial, Helvetica, sans-serif;
+  	font-size:12px;
+  	text-decoration:underline;	
+  }
+  .cellbg-first {
+  	background-image:url("../images/bg_tab.gif");
+  	height:20px;
+  	color:#000000;
+  	font-family:Arial, Helvetica, sans-serif;
+  	font-size:11px;
+  	font-weight:bold;
+  	border-top:1px solid #BFCFD4;
+  	border-bottom:1px solid #BFCFD4;
+  	border-left:1px solid #BFCFD4;
+  	border-right:1px solid #BFCFD4;
+  }
+  .cellbg {
+  	background-image:url("../images/bg_tab.gif");
+  	height:20px;
+  	color:#000000;
+  	font-family:Arial, Helvetica, sans-serif;
+  	font-size:11px;
+  	font-weight:bold;
+  	border-top:1px solid #BFCFD4;
+  	border-bottom:1px solid #BFCFD4;
+  	border-right:1px solid #BFCFD4;
+  }
+  .cellbg-middle {
+  	background-image:url("../images/bg_tab.gif");
+  	height:20px;
+  	color:#000000;
+  	font-family:Arial, Helvetica, sans-serif;
+  	font-size:11px;
+  	font-weight:bold;
+  	border-top:1px solid #BFCFD4;
+  	border-bottom:1px solid #BFCFD4;
+  }
+  .cellbg-last {
+  	background-image:url("../images/bg_tab.gif");
+  	height:20px;
+  	color:#000000;
+  	font-family:Arial, Helvetica, sans-serif;
+  	font-size:11px;
+  	font-weight:bold;
+  	border-top:1px solid #BFCFD4;
+  	border-bottom:1px solid #BFCFD4;
+  	border-right:1px solid #BFCFD4;
+  }
+  .cl {
+  	border-left:1px solid #BFCFD4;
+  	border-right:1px solid #BFCFD4;
+  	background-color: white;
+  }
+  .cb {
+  	border-left:1px solid #BFCFD4;
+  	border-right:1px solid #BFCFD4;
+  	border-bottom:1px solid #BFCFD4;
+  	background-color: white;
+  }
+  .cm {
+  	border-right:1px solid #BFCFD4;
+  	background-color: white;
+  }
+  .cm-blank {
+  	background-color: white;
+  }
+  .cbm {
+  	border-right:1px solid #BFCFD4;
+  	border-bottom:1px solid #BFCFD4;
+  	background-color: white;
+  }
+  .cbmr {
+  	border-bottom:1px solid #BFCFD4;
+  	background-color: white;
+  }
+  .result-background {
+  	padding:5px;
+  	background-color: #DDD;
+  	background-color: #f6f6f6;
+  	border:1px solid #BFCFD4;
+  }

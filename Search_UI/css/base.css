@@ -1,0 +1,516 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ::::: https://ec2-50-16-167-117.compute-1.amazonaws.com:17000/styles.css ::::: */
+
+
+body, td {
+	color: rgb(34, 34, 34);
+	font: 12px Arial, Helvetica, sans-serif;
+}
+table {
+	border-collapse: collapse;
+	border-style: solid;
+	border-width: 1px;
+	text-align: left;
+}
+th {
+	background-color: rgb(207, 238, 248);
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: inherit;
+}
+td {
+	margin-top: 0pt;
+	vertical-align: top;
+}
+ul {
+	list-style-type: none;
+	margin: 0pt;
+}
+table, li {
+	list-style-type: none;
+	margin: 0pt;
+	padding: 0pt;
+}
+#page-container {
+	float: left;
+	margin: auto;
+	width: 100%;
+}
+#results {
+	background-color: rgb(246, 246, 246);
+	border: 1px solid rgb(191, 207, 212);
+}
+#results {
+	background-color: rgb(246, 246, 246);
+	float: left;
+	width: 100%;
+	border-width: 1px;
+	border-style: solid;
+	padding-bottom:5px;
+}
+#nav {
+	left: 0pt;
+	top: 15px;
+	width: 200px;
+}
+#navResultHeader {
+	color: rgb(51, 52, 53);
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 5px;
+	text-align: left;
+}
+#searchform {
+	margin-left: 203px;
+	width: 85%;
+}
+#pagination {
+	float: right;
+	color: rgb(1, 91, 167);
+}
+#pagination a {
+	color: rgb(1, 91, 167);
+}
+#resultinfo {
+	float: left;
+	color: rgb(1, 91, 167);
+}
+#docs {
+	float: left;
+	width: 100%;
+}
+#docsum #fieldvalue {
+	width: 100px;
+}
+#docsum #fieldname {
+	color: gray;
+	width: 100px;
+	float: left;
+}
+#docsum li {
+	display: inline-block;
+	width: 100%;
+}
+#resinfpagtop {
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	font-size: 11px;
+	width: 100%;
+}
+#resinfpagbot {
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	font-size: 11px;
+	width: 100%;
+}
+#resdoc {
+	padding:5px;
+}
+#restable {
+	background-color: rgb(255, 255, 255);
+	border-color: -moz-use-text-color rgb(212, 218, 220);
+	border-color: #D4DADC;
+	border-style: solid;
+	float: left;
+	width: 100%;
+}
+#restableEdit a:link {
+	color:#015BA7;
+	text-decoration: none;
+}
+#restableEdit a:hover {
+	color:#015BA7;
+	text-decoration: underline;
+}
+#restableView a:link {
+	color:#015BA7;
+	text-decoration: none;
+}
+#restableView a:hover {
+	color: rgb(1, 91, 167);
+	text-decoration: underline;
+}
+#header {
+	background-color: #e9f7fb;
+	background-image: url('../images/bg_tab.gif');
+	background-repeat: repeat-x;
+	border: 1px solid rgb(191, 207, 212);
+	height: 20px;
+	padding-left: 5px;
+}
+#header-last {
+	background-color: #e9f7fb;
+	background-image: url('../images/bg_tab.gif');
+	background-repeat: repeat-x;
+	border-top: 1px solid rgb(191, 207, 212);
+	border-bottom: 1px solid rgb(191, 207, 212);
+	border-right: 0px solid rgb(191, 207, 212);
+	border-left: 1px solid rgb(191, 207, 212);
+	height: 20px;
+	padding-left: 5px;
+}
+
+#header-blank {
+	background-color: #e9f7fb;
+	background-image: url('../images/bg_tab.gif');
+	background-repeat: repeat-x;
+	border-top: 1px solid rgb(191, 207, 212);
+	border-bottom: 1px solid rgb(191, 207, 212);
+	border-right: 0px solid rgb(191, 207, 212);
+	border-left: 0px solid rgb(191, 207, 212);
+	height: 20px;
+	padding-left: 5px;
+}
+#spacer {
+	margin-bottom: 1px;
+	padding-bottom: 1px;
+}
+#resultTableWrapper {
+	border-color: -moz-use-text-color;
+	border-style: none;
+	border-width: medium;
+	float: left;
+	width: 100%;
+}
+.doc td {
+	border-color: rgb(191, 207, 212);
+	border-style: none none solid;
+	border-width: 1px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.doc a:link {
+	color: blue;
+	text-decoration: none;
+}
+.doc a:visited {
+	color: black;
+	text-decoration: none;
+}
+.doc a:active {
+	text-decoration: none;
+}
+.doc a:hover {
+	color: red;
+	text-decoration: underline;
+}
+.navHeader {
+	display: block;
+}
+.navHeader * {
+	background: none repeat scroll 0pt 0pt rgb(25, 151, 192);
+	display: block;
+	font-size: 0.01em;
+	height: 1px;
+	overflow: hidden;
+}
+.navHeader1 {
+	background: none repeat scroll 0pt 0pt rgb(82, 177, 207);
+	border-left: 1px solid rgb(156, 210, 227);
+	border-right: 1px solid rgb(156, 210, 227);
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+.navHeader2 {
+	background: none repeat scroll 0pt 0pt rgb(68, 170, 203);
+	border-left: 1px solid rgb(232, 244, 248);
+	border-right: 1px solid rgb(232, 244, 248);
+	margin-left: 1px;
+	margin-right: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+.navHeader3 {
+	border-left: 1px solid rgb(68, 170, 203);
+	border-right: 1px solid rgb(68, 170, 203);
+	margin-left: 1px;
+	margin-right: 1px;
+}
+.navHeader4 {
+	border-left: 1px solid rgb(156, 210, 227);
+	border-right: 1px solid rgb(156, 210, 227);
+}
+.navHeader5 {
+	border-left: 1px solid rgb(82, 177, 207);
+	border-right: 1px solid rgb(82, 177, 207);
+}
+.navHeaderfg {
+	background: none repeat scroll 0pt 0pt rgb(25, 151, 192);
+	color: white;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	padding-left: 15px;
+	text-align: left;
+}
+.navs {
+	display: block;
+}
+.navs * {
+	background: none repeat scroll 0pt 0pt rgb(207, 238, 248);
+	display: block;
+	font-size: 0.01em;
+	height: 1px;
+	overflow: hidden;
+}
+.navs1 {
+	background: none repeat scroll 0pt 0pt rgb(219, 242, 249);
+	border-left: 1px solid rgb(234, 247, 251);
+	border-right: 1px solid rgb(234, 247, 251);
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+.navs2 {
+	background: none repeat scroll 0pt 0pt rgb(216, 241, 249);
+	border-left: 1px solid rgb(250, 253, 254);
+	border-right: 1px solid rgb(250, 253, 254);
+	margin-left: 1px;
+	margin-right: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+.navs3 {
+	border-left: 1px solid rgb(216, 241, 249);
+	border-right: 1px solid rgb(216, 241, 249);
+	margin-left: 1px;
+	margin-right: 1px;
+}
+.navs4 {
+	border-left: 1px solid rgb(234, 247, 251);
+	border-right: 1px solid rgb(234, 247, 251);
+}
+.navs5 {
+	border-left: 1px solid rgb(219, 242, 249);
+	border-right: 1px solid rgb(219, 242, 249);
+}
+.navsfg {
+	background: none repeat scroll 0pt 0pt rgb(207, 238, 248);
+	padding-left: 9px;
+}
+.navsfg ul {
+    display: inline-block;
+    margin-left: 3px;
+    padding: 3px;
+}
+
+.navsfg a:hover {
+	color: rgb(51, 91, 182);
+}
+.navsfg a:link {
+     color: rgb(51, 52, 53);
+     text-decoration: none;
+}
+.navsfg a:link:hover {
+     color: rgb(51, 52, 53);
+     text-decoration: underline;
+}
+
+.recycleNav {
+	display: none;
+}
+.recycleNav * {
+	background: none repeat scroll 0pt 0pt rgb(220, 251, 220);
+	display: none;
+	font-size: 0.01em;
+	height: 1px;
+	overflow: hidden;
+}
+.recycleNav1 {
+	background: none repeat scroll 0pt 0pt rgb(228, 252, 228);
+	border-left: 1px solid rgb(239, 253, 239);
+	border-right: 1px solid rgb(239, 253, 239);
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-left: 1px;
+	padding-right: 1px;
+	display: none;
+}
+.recycleNav2 {
+	background: none repeat scroll 0pt 0pt rgb(226, 251, 226);
+	border-left: 1px solid rgb(251, 254, 251);
+	border-right: 1px solid rgb(251, 254, 251);
+	margin-left: 1px;
+	margin-right: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	display: none;
+}
+.recycleNav3 {
+	border-left: 1px solid rgb(226, 251, 226);
+	border-right: 1px solid rgb(226, 251, 226);
+	margin-left: 1px;
+	margin-right: 1px;
+	display: none;
+}
+.recycleNav4 {
+	border-left: 1px solid rgb(239, 253, 239);
+	border-right: 1px solid rgb(239, 253, 239);
+	display: none;
+}
+.recycleNav5 {
+	border-left: 1px solid rgb(228, 252, 228);
+	border-right: 1px solid rgb(228, 252, 228);
+	display: none;
+}
+.recycleNavfg {
+	background: none repeat scroll 0pt 0pt rgb(220, 251, 220);
+	font-weight: bold;
+	padding: 3px 3px 1px;
+	display: none;
+}
+#searchwrapper {
+	background-image: url('searchbar.jpg');
+	background-repeat: no-repeat;
+	height: 50px;
+	margin-top: 0pt;
+	padding-top: 0pt;
+	position: relative;
+	width: 345px;
+}
+#searchwrapper form {
+	display: inline;
+}
+
+#kdsNewMenu a:hover {
+	background-color: rgb(227, 243, 255);
+	color: rgb(1, 91, 167);
+
+}
+#kdsNewMenu a {
+	background-image: url('../images/master.png');
+	background-repeat: no-repeat;
+	border: medium none;
+	display: block;
+	height: 16px;
+	padding-bottom: 3px;
+	padding-left: 18px;
+	text-decoration: none;
+	width: 91%;
+	color: black;
+}
+.NewNav {
+	background: none repeat scroll 0pt 0pt transparent;
+	overflow: visible;
+	padding: 0pt;
+}
+.NewNavMenuImages {
+	border: 0pt none;
+	margin-right: 5px;
+	vertical-align: -3px;
+}
+.NewNav1 {
+	background: url('../images/sidebar_sprite.png') no-repeat scroll -409px top transparent;
+	height: 33px;
+	left: -3px;
+	position: relative;
+	width: 204px;
+	z-index: 70;
+}
+.NewNav2 {
+	background: none repeat scroll 0pt 0pt transparent;
+	border: 0pt none;
+	color: rgb(255, 255, 255);
+	font-size: 1em;
+	margin: 0pt;
+	padding: 8px 0pt 12px 12px;
+	width: 200px;
+}
+.NewNav3 {
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(23, 151, 192);
+	display: none;
+	margin-left: 3px;
+	margin-top: -4px;
+	position: absolute;
+	width: 198px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	line-height: 19px;
+}
+.NewNav4 {
+	background-position: 6px -22px;
+}
+.NewNav5 {
+	background-position: 6px -342px;
+}
+.NewNav6 {
+	background-position: 6px -202px;
+}
+.NewNav7 {
+	background-position: 6px -2px;
+}
+.NewNav8 {
+	background-position: 6px -82px;
+}
+.NewNav9 {
+	background-position: 6px -242px;
+}
+.NewNav10 {
+	background-position: 6px -102px;
+}
+.NewNav11 {
+	background-position: 6px -60px;
+}
+#fbucket {
+	width: 170px;
+}
+#fbucket li {
+	display: inline;
+	float: left;
+}
+
+ul#fbucket li#fbLabel {
+width: 88%;
+}
+
+ul#fbucket li#fbCount {
+    text-align: right;
+    width: 12%;
+}
+
+
+
+
+#fbcount {
+	color:red;
+}
+#breadcrumbs {
+	position: relative;
+	width: 400px;
+	font-size: 91%;
+	color: rgb(1, 91, 167);
+	padding-left: 100px;
+}
+#breadcrumbs li {
+	display: inline-block;
+}
+#breadcrumbs a {
+	color: rgb(1, 91, 167);
+	text-decoration: none;
+}
+#searchform div {
+	display: inline-block;
+}
+#helplinks li {
+	display: inline-block;
+}
+#helplinks {
+	float: right;
+	font-size: 91%;
+}
+#helplinks a {
+	color: rgb(1, 91, 167);
+	text-decoration: none;
+}
+#helplinks a:hover {
+	color: rgb(1, 91, 167);
+	text-decoration: underline;
+}
+#createNewLabel {
+	font-weight: bold;
+}
