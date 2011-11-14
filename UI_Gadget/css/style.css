@@ -222,35 +222,31 @@ div.filter-container {
 /* always visible styles */
 .selectbox {display:inline-block;*display:inline;font-family:arial;font-size:1em;margin:1px;position:relative;vertical-align:middle;zoom:1;}
 .selectbox .display{
-  background:#82afc6;
-  border:1px solid #c2d6e0;
-  color:#fff;
+  background:url(../images/select-bg.png) no-repeat 0 0;
+  text-shadow: 0px 1px 0px #f4f8fa; color:#2a4c5d;
   cursor:default;
   display:block;
   font-weight:normal;
-  height:1.46em;
+  height:20px;
   line-height:1.46em;
   overflow:hidden;
   outline:none;
-  padding:2px 24px 2px 12px;
+  padding:4px 24px 2px 12px;
   position:relative;
   text-decoration:none;
   overflow:hidden;
   width:180px;
-  border-radius:5px;
-  -moz-border-radius:5px;
-  -webkit-border-radius:5px;
   cursor: pointer;
 }
 .selectbox.disabled .display{color:#666;}
-.selectbox.focused .display .text{background-color:#82afc6; color:#fff;display:inline-block;*display:inline;zoom:1;}
+.selectbox.focused .display .text{ text-shadow: 0px 1px 0px #f4f8fa; color:#2a4c5d;display:inline-block;*display:inline;zoom:1;}
 .selectbox .display.active{border-color:#7b7d83;}
 .selectbox .display .arrow_btn{
     background: url(../images/select-button.png) no-repeat 0 0;
 	display: block;
-	height: 20px;
+	height: 13px;
 	line-height: .92em;
-	padding: 4px;
+	padding: 6px;
 	position: absolute;
 	right: 0;
 	text-align: center;
@@ -265,7 +261,7 @@ div.filter-container {
 .selectbox .display.active .arrow_btn{
     
 }
-.selectbox .display.hover .arrow_btn{background: url(../images/select-button.png) no-repeat 0 -20px;}
+.selectbox .display.hover .arrow_btn{background: url(../images/select-button.png) no-repeat 0 -25px;}
 .selectbox .value{display:none;}
 
 /* dropdown styles */
@@ -274,7 +270,7 @@ div.filter-container {
   border:1px solid #828790;
   display:block;
   font-family:arial;
-  font-size:1em;
+  font-size:11px;
   list-style-type:none;
   margin:0;
   overflow-x:hidden;
