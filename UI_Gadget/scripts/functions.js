@@ -2,6 +2,37 @@ $(function(){
 
 watermark('.gadget-search input.textInput', 'field');
 
+generate_tooltip('td.namefield');
+function generate_tooltip(selector){
+	
+	var items = $(selector + ' div').children();
+	$.each(items, function(index, value){
+		var tipValue = $(value).html();
+		//alert(tipValue);
+		$(value).attr('title', tipValue);
+		$(value).tipTip({maxWidth: "auto", edgeOffset: 5, defaultPosition:'left'});
+	});	
+}
+
+dropdown_change_function()
+function dropdown_change_function() {
+	$("select.filter-select").change(function() { 
+		var field_value = $('div.gadget-search input.textInput').val()
+		if(field_value != 'Search Salesforce') {
+			alert("Insert filtered search function here...");
+		}
+	});
+}
+
+custom_dropdown_init();
+function custom_dropdown_init() {
+	$("[name=filter]").sb({
+        optionFormat: function() {
+            return $(this).attr("alt");
+    	}
+    });
+}
+
 function watermark(selector, param) {
     // Set the watermark var
 		var watermark_label = 'Search Salesforce';

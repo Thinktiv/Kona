@@ -177,6 +177,7 @@ td.namefield a:hover {
 	width: 560px;
 	overflow: auto;
 }
+/*
 .slide {
 	float: right;
 	height: 390px;
@@ -186,12 +187,12 @@ td.namefield a:hover {
 	width: 355px;
 	z-index: 1000;
 }
+*/
 .slide #inner {
 	background:url("../images/BG-Gadget.png") no-repeat scroll 0 0 transparent;
-	bottom: 0;
+	
 	color: #333333;
 	height: 387px;
-	left: 0;
 	position: absolute;
 	width: 330px;
 }
