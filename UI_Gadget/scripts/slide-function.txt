@@ -1,0 +1,31 @@
+$(function(){
+
+/* Start sliding function */
+var isOpen = false;
+  var closedPOS = 222;
+  var openPOS = -30;
+  $('#inner button').click(function() {
+  if (isOpen == true ) {
+    $(this).parent().animate({marginLeft: closedPOS});
+    isOpen = false;
+  }
+  else if (isOpen ==false) {
+    $(this).parent().animate({marginLeft: openPOS});
+    isOpen = true;
+  }
+});
+
+$('#inner .gadget-contract-btn').click(function() {
+  if (isOpen == true ) {
+    $(this).parent().animate({marginLeft: closedPOS});
+    isOpen = false;
+  }
+  else if (isOpen ==false) {
+    $(this).parent().animate({marginLeft: openPOS});
+    isOpen = true;
+  }
+});
+
+/* End sliding function */
+
+});
