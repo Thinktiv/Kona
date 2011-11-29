@@ -20,7 +20,7 @@ body {
 	font-size:18px;
 }
 .gadget-content {
-	margin-left:53px;
+	margin-left:20px;
 	width:194px;
 	height:300px;
 	margin-top:13px;
@@ -159,7 +159,7 @@ td.namefield a:hover {
 	height: 23px;
 	position: absolute;
 	top:10px;
-	right:55px;
+	right:85px;
 	width: 22px;
 	cursor:pointer;
 }
@@ -188,6 +188,14 @@ td.namefield a:hover {
 	z-index: 1000;
 }
 */
+
+.gadget-tab {
+	background:url("../images/gadget-tab.png") no-repeat 0 0;
+	width: 33px;
+	height:186px;
+	cursor: pointer;
+}
+
 .slide #inner {
 	background:url("../images/BG-Gadget.png") no-repeat scroll 0 0 transparent;
 	

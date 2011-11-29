@@ -1,6 +1,6 @@
 $(function(){
 
-watermark('.gadget-search input.textInput', 'field');
+//watermark('.gadget-search input.textInput', 'field');
 
 generate_tooltip('td.namefield');
 function generate_tooltip(selector){
@@ -18,7 +18,7 @@ dropdown_change_function()
 function dropdown_change_function() {
 	$("select.filter-select").change(function() { 
 		var field_value = $('div.gadget-search input.textInput').val()
-		if(field_value != 'Search Salesforce') {
+		if(field_value != '') {
 			alert("Insert filtered search function here...");
 		}
 	});
