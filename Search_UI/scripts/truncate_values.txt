@@ -1,0 +1,12 @@
+truncate_values('.result-background table td.fieldvalue, .result-background table td.cm a', 10);
+
+function truncate_values(selector, max) {
+	var rows = $(selector);
+	$.each(rows, function(index, value){
+		//alert($(value).text());
+		var length = max;
+		var myString = $(value).text();
+		var myTruncatedString = myString.substring(0, length);
+		$(value).text(evaluate_length(myTruncatedString, length));
+	});
+}

@@ -118,3 +118,12 @@ function readCookie(name) {
 function eraseCookie(name) {
     createCookie(name, '', -1);
 }
+
+function toggle() {    
+	var ele = document.getElementById("kdsNewMenu");    
+	if(ele.style.display == "block") {      
+		ele.style.display = "none";    
+	} else {     
+		ele.style.display = "block";    
+	}
+}
