@@ -1,9 +1,16 @@
 $(document).ready(function(){
 	
+	$('.result-background table td.fieldvalue, .result-background table td.cm a').jTruncate({  
+        length: 30,  
+        minTrail: 0,  
+        ellipsisText: "...",  
+        lessAni: 0
+    });  
+	
 	/*
 	*	Truncate fields
 	*/
-	truncate_values('.result-background table td.fieldvalue, .result-background table td.cm a', 10);
+	//truncate_values('.result-background table td.fieldvalue b, .result-background table td.cm a b', 10);
 	function truncate_values(selector, max) {
 		var rows = $(selector);
 		$.each(rows, function(index, value){

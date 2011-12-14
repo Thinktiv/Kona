@@ -1,0 +1,295 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin:0;
+	padding:0;
+	border:0;
+	width:100%;
+	background:#fff;
+	min-width:600px;
+	font-size:12px;
+	color: rgb(34, 34, 34);
+	font: 12px Arial, Helvetica, sans-serif;
+}
+ul {
+	list-style-type: circle;
+	margin: 0pt;
+}
+table, li {
+	list-style-type: circle;
+	margin: 0pt;
+	padding: 0pt;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+.kona-intro {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#000000;
+}
+div.page-titles ul li {
+	list-style-type: disc;
+	margin-left:15px;
+	padding-top:2px;
+}
+.points {
+	border-bottom: 1px solid #E1E1E1;
+	list-style-type: square;
+	margin: 10px 0 0;
+	padding-bottom: 22px;
+	width: 515px;
+}
+.mt-16 {
+	margin-top:16px;
+}
+.mt-10 {
+	margin-top:10px;
+}
+.mt-5 {
+	margin-top:5px;
+}
+.mt-10 {
+	margin-top:10px;
+}
+.rlinks {
+	color:#bb5944;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.col-1 {
+	width:281px;
+	height:380px;
+	margin-top:24px;
+	display:block;
+	float: left;
+	margin-right:20px;
+}
+.col-2 {
+	width:281px;
+	height:380px;
+	margin-top:24px;
+	display:block;
+	float: left;
+	margin-right:20px;
+}
+#button h1 {
+	font-size:18px;
+	color:#666666;
+	font-weight:200;
+}
+#button h1 a {
+	font-size:18px;
+	color:#666666;
+	font-weight:200;
+	text-decoration: none;
+}
+#button h1 a:hover {
+	font-size:18px;
+	color:#666666;
+	font-weight:200;
+	text-decoration: none;
+}
+#button4 h1 a {
+	font-size:18px;
+	color:#666666;
+	font-weight:200;
+	text-decoration: none;
+}
+#button4 h1 a:hover {
+	font-size:18px;
+	color:#666666;
+	font-weight:200;
+	text-decoration: none;
+}
+#button4 h1 {
+	font-size:18px;
+	color:#666666;
+	font-weight:200;
+}
+#button5 h1 {
+	font-size:18px;
+	color:#666666;
+	font-weight:200;
+}
+#button5 h1 a {
+	font-size:18px;
+	color:#666666;
+	font-weight:200;
+	text-decoration: none;
+}
+#button6 h1 {
+	font-size:18px;
+	color:#666666;
+	font-weight:200;
+}
+#button6 h1 a {
+	font-size:18px;
+	color:#666666;
+	font-weight:200;
+	text-decoration: none;
+}
+#button6 h1 a:hover {
+	font-size:18px;
+	color:#666666;
+	font-weight:200;
+	text-decoration: none;
+}
+#button5 h1 a:hover {
+	font-size:18px;
+	color:#666666;
+	font-weight:200;
+	text-decoration: none;
+}
+#button a {
+	color:#bb5944;
+	font-weight: bold;
+	text-decoration: underline;
+}
+#button4 a {
+	color:#bb5944;
+	font-weight: bold;
+	text-decoration: underline;
+}
+#button5 a {
+	color:#bb5944;
+	font-weight: bold;
+	text-decoration: underline;
+}
+#button6 a {
+	color:#bb5944;
+	font-weight: bold;
+	text-decoration: underline;
+}
+#button a:hover {
+	color:#D07E6F;
+	font-weight: bold;
+	text-decoration: underline;
+}
+#button4 a:hover {
+	color:#D07E6F;
+	font-weight: bold;
+	text-decoration: underline;
+}
+#button5 a:hover {
+	color:#D07E6F;
+	font-weight: bold;
+	text-decoration: underline;
+}
+#button6 a:hover {
+	color:#D07E6F;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.fw-t {
+	font-weight:600;
+}
+ul.step-lists {
+	margin-top:4px;
+	list-style-type:none;
+	line-height:16px;
+	font-weight:bold;
+}
+div.page-titles div.col-1 div#button ul.step-lists li {
+	list-style-type: none;
+	margin-left:0px;
+	color:#b0b0b0;
+}
+div.page-titles div.col-2 div#button4 ul.step-lists li {
+	list-style-type: none;
+	margin-left:0px;
+	color:#b0b0b0;
+}
+div.page-titles div.col-2 div#button5 ul.step-lists li {
+	list-style-type: none;
+	margin-left:0px;
+	color:#b0b0b0;
+}
+div.page-titles div.col-2 div#button6 ul.step-lists li {
+	list-style-type: none;
+	margin-left:0px;
+	color:#b0b0b0;
+}
+.step-lists {
+	margin-top:8px;
+	list-style-type:none;
+}
+#myslide {
+	width:281px;
+	overflow:hidden;
+	position: relative;
+	height:174px;
+	margin-bottom:20px
+}
+#myslide .cover {
+	width:3000px;
+	position: absolute;
+	height:174px;
+}
+#myslide .image-holder {
+	width:281px;
+	float:left;
+}
+.clear {
+	clear:both;
+}
+#myslide2 {
+	width:281px;
+	overflow:hidden;
+	position: relative;
+	height:174px;
+	margin-bottom:20px
+}
+#myslide2 .cover2 {
+	width:3000px;
+	position: absolute;
+	height:174px;
+}
+#myslide2 .image-holder2 {
+	width:281px;
+	float:left;
+}
+.clear {
+	clear:both;
+}
+#myslide3 {
+	width:281px;
+	overflow:hidden;
+	position: relative;
+	height:174px;
+	margin-bottom:20px
+}
+#myslide3 .cover3 {
+	width:3000px;
+	position: absolute;
+	height:174px;
+}
+#myslide3 .image-holder3 {
+	width:281px;
+	float:left;
+}
+.clear {
+	clear:both;
+}
+#myslide4 {
+	width:281px;
+	overflow:hidden;
+	position: relative;
+	height:174px;
+	margin-bottom:20px
+}
+#myslide4 .cover4 {
+	width:3000px;
+	position: absolute;
+	height:174px;
+}
+#myslide4 .image-holder4 {
+	width:281px;
+	float:left;
+}
+.clear {
+	clear:both;
+}
